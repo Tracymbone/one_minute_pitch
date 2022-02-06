@@ -1,0 +1,10 @@
+body{
+    background-image: url(images/home.jpg);
+    background-size:cover;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    font-size: 23px;
+}
