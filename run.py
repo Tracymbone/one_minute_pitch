@@ -13,6 +13,13 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/contact')
+def contactme():
+    return render_template('contactme.html')
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

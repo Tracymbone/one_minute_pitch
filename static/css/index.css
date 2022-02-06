@@ -8,7 +8,7 @@ nav{
     display: flex;
     justify-content: space-between;
     color: #FFFFFF;
-    font-size: 23px;
+    font-size: 0px;
 }
 .container{
     background-image: url("../images/home.jpg");
