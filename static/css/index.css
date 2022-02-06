@@ -1,0 +1,26 @@
+body{
+    background-image: url(images/home.jpg);
+    background-size:cover;
+    height:100%;
+    width:100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    font-size: 23px;
+}
+.container{
+    background-image: url("../images/home.jpg");
+    background-size:cover;
+    height: 100vh;
+    width:100%;
+}
+.row ul {
+    display: flex;
+    gap: 150px;
+    font-size: 30px;
+}
+.row{
+    margin-right: 10px;
+}
