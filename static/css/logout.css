@@ -1,0 +1,15 @@
+.row{
+    background-image: url("../images/logout.jpeg");
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    top: 30%;
+    position: relative;
+    transform: 0,-50%;
+    margin-left: 600px;
+    margin-bottom: 50px;
+    
+
+}
