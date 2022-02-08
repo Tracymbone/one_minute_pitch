@@ -28,9 +28,9 @@ def signup():
     return render_template('signup.html')
 
 
-@app.route('/count.html')
+@app.route('/pitch.html')
 def count():
-    return render_template('count.html')
+    return render_template('pitch.html')
 
 
 
