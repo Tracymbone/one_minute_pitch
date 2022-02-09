@@ -61,12 +61,12 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/login.html')
+@app.route('/login.html',methods=["GET","POST"])
 def login():
     return render_template('login.html')
 
 
-@app.route('/signup.html')
+@app.route('/signup.html',methods=["GET","POST"])
 def signup():
     return render_template('signup.html')
 
