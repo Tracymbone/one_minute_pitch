@@ -38,6 +38,8 @@ class user(db.Model,UserMixin):
          if existing_user_email:
              raise ValidationError("The email is already in use!")
          
+         
+         
  class loginForm():
      username=StringField(validators=[InputRequired(),Length(min=4,max=20)])
      email=StringField(validators=[InputRequired(),Length(min=4,max=20)])
