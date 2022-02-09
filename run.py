@@ -53,7 +53,7 @@ class user(db.Model,UserMixin):
 def home():
      return render_template('home.html')
  
-
+ 
 
 
 @app.route('/')
