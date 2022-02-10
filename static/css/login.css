@@ -9,7 +9,7 @@
 
 
 input[type=text]{
-    width: 500%;
+    width: 300%;
     height: 10%;
 }
 
@@ -24,13 +24,18 @@ input[type=text]{
 }
 
 input[type=Email]{
-    width: 500%;
+    width: 300%;
     height: 100%;
 }
 
 input[type=Password]{
-    width: 500%;
+    width: 300%;
     height: 100%;
 
+}
+
+a{
+    font-size: x-large;
+    color: beige;
 }
 
