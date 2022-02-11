@@ -70,6 +70,14 @@ def login():
 
 @app.route('/signup.html',methods=["GET","POST"])
 def signup():
+    if request.method=='POST':
+        firstname=request.form['firstname']
+        middlename=request.form['middlename']
+        username=request.form['username']
+        email=request.form['email']
+        password=request.form['password']
+        
+        
     return render_template('signup.html')
 
 
