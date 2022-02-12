@@ -1,0 +1,58 @@
+{%extends 'base.html'%} {%block content%}
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<h1 class="text-center">Product Pitches</h1>
+<br />
+{% for pitch in all_pitches%}
+<div class="container-fluid pitch">
+  <div class="display">
+    <div class="card card_main">
+      <div id="show">
+        <div class="card-header">
+          <h1 style="color: #131111">{{pitch.category}}</h1>
+        </div>
+        <div class="card-body">
+          <h2 style="color: #131111">{{pitch.title}}</h2>
+          <h2 style="color: #131111">{{pitch.pitch}}</h2>
+        </div>
+      </div>
+      <hr />
+      <div class="card-footer">
+        &nbsp;&nbsp;&nbsp;
+
+        <button class="btn btn-primary">
+          <a
+            style="color: white"
+            href="{{url_for('main.upVote',id = pitch.id)}}"
+            ><i class="fa fa-thumbs-up"></i> Upvote {{pitch.upvote.count()}}</a
+          >
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger">
+          <a
+            style="color: white"
+            href="{{url_for('main.downVote',id = pitch.id)}}"
+          >
+            <i class="fa fa-thumbs-down"></i> Downvote
+            {{pitch.downvote.count()}}</a
+          >
+        </button>
+        &nbsp;&nbsp;&nbsp;
+
+        <button class="btn btn-success">
+          <a
+            style="color: white"
+            href="{{url_for('main.comment',id = pitch.id)}}"
+          >
+            Comment</a
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endfor%} {%endblock%}

@@ -23,7 +23,7 @@ class RegisterForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    email=EmailField('Email Address',validators=[input_required(message='Email Address Required'),Email()])
-    password=PasswordField('Password',validators=[input_required(message='Password Required')])
+    email=EmailField('Email Address',validators=[input_required(message='Email Address Required'),Email()],render_kw={"placeholder":"Your Email Address"})
+    password=PasswordField('Password',validators=[input_required(message='Password Required')],render_kw={"placeholder":"Your Login Password"})
     remember = BooleanField('Remember me')
     login=SubmitField("Login")

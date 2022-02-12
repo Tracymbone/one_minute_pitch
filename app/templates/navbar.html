@@ -1,24 +1,27 @@
-<div class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"> One minute pitch</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="{{url_for('auth.add_register')}}">Signup</a></li>
-                <li><a href="{{url_for('auth.login')}}">Login</a></li>
-                {% if current_user.is_authenticated%}
-                <li><a href="{{url_for('main.post',id=current_user.id)}}"> New Pitch</a></li>
-                {%endif%}
-                <li><a href="./logout.html">Logout</a></li>
-            </ul>
-        </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid mt-4">
+    <div class="navbar-header">
+      <a id="top" class="navbar-brand" href="/">Pitch Application</a>
     </div>
-</div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {% if current_user.is_authenticated %}
+      <li>
+        <a
+          style="font-size: 15px; color:white"
+          class="btn btn-success"
+          href="{{url_for('main.pitch',id=current_user.id)}}"
+          >New Pitch</a
+        >
+        <li> <a  href="{{url_for('main.profile',my_name=current_user.username)}}">Profile</a></li>
+    
+      <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+      {% else %}
+      <li><a href="{{url_for('auth.register')}}"> Register</a></li>
+      <li><a href="{{url_for('auth.login')}}">Login</a></li>
+      {%endif%}
+    </ul>
+  </div>
+</nav>

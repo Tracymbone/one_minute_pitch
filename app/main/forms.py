@@ -9,10 +9,10 @@ class UpdateForm(FlaskForm):
     submit = SubmitField("Update Profile")
 
 
-class PostForm(FlaskForm):
+class PitchForm(FlaskForm):
     title = StringField("pitch title", validators=[input_required(message='Pitch title is required')],render_kw={"placeholder":"Pitch Title"})
     category = SelectField("Pitch category", validators=[input_required(message="Pitch Category required")],choices=categories)
-    post = TextAreaField("Pitch description", validators=[input_required(message="Pitch required")],render_kw={"placeholder":"Pitch description"})
+    pitch = TextAreaField("Pitch description", validators=[input_required(message="Pitch required")],render_kw={"placeholder":"Pitch description"})
     submit = SubmitField("Post Pitch")
 
 
