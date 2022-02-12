@@ -16,7 +16,7 @@ In life, you only have 60 seconds to impress someone. 1 minute can make or break
 
 # Project Link
 
-This url link will take you to my application  https://tracyoneminutepitch.herokuapp.com/
+This url link will take you to my application  https://tracypitch.herokuapp.com/
 
 # Setup Instruction 
 
